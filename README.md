@@ -1,8 +1,8 @@
-# Bixi Live GBFS Feed Data Analytics
-This project involves the end-to-end development of a data engineering pipeline using the Bixi Live GBFS feed. The objective was to ingest, process, and transform real-time data about bike-sharing stations in Montreal to facilitate dynamic data analysis and visualization. Using Azure Data Factory and Azure Databricks, the project successfully ingested JSON formatted data about station information and status, transformed and cleaned this data, and stored the refined datasets in Azure Data Lake. The processed data was then used to create an interactive dashboard in Power BI, providing insights into station operations and mappped data.
+# DE- Azure project for Bike Rental
+This project involves the end-to-end development of a data engineering pipeline using the bike rental Live GBFS feed. The objective was to ingest, process, and transform real-time data about bike-sharing stations in Montreal to facilitate dynamic data analysis and visualization. Using Azure Data Factory and Azure Databricks, the project successfully ingested JSON formatted data about station information and status, transformed and cleaned this data, and stored the refined datasets in Azure Data Lake. The processed data was then used to create an interactive dashboard in Power BI, providing insights into station operations and mappped data.
 
 ### Objectives
-- **Data Ingestion**: Automate the extraction of real-time data from the Bixi Live GBFS feed using Azure Data Factory.
+- **Data Ingestion**: Automate the extraction of real-time data from the bike rental Live GBFS feed using Azure Data Factory.
 - **Data Processing and Transformation**: Utilize Azure Databricks to cleanse and merge datasets for accurate analysis.
 - **Data Visualization**: Develop a Power BI dashboard to visualize key metrics and provide actionable insights into bike station statuses and usage.
 - **Automation and Monitoring**: Implement automated data updates and monitoring to ensure the continuous availability of updated and accurate data.
@@ -14,7 +14,7 @@ This project aims to enhance operational efficiencies and user experiences by le
 ## 1. Data Ingestion Process
 
 ### Creating Linked Services in Azure Data Factory
-- Configured HTTP linked services to connect to the Bixi Live GBFS Feed URLs.
+- Configured HTTP linked services to connect to the bike rental Live GBFS Feed URLs.
 - Defined two linked services: one for station information and another for station status.
 
 
@@ -33,7 +33,7 @@ This project aims to enhance operational efficiencies and user experiences by le
 
 ### Scheduling and Monitoring
 - Scheduled the pipeline to run at regular intervals to ensure the datasets are updated with the latest information.
-- Set up a trigger to run every 5 minutes, updating the files with new data from the Bixi Live GBFS feed.
+- Set up a trigger to run every 5 minutes, updating the files with new data from the bike rental Live GBFS feed.
 - Monitored the pipeline for successful execution and handled any errors or issues during the data ingestion process.
 
 
@@ -68,7 +68,7 @@ This project aims to enhance operational efficiencies and user experiences by le
 - Utilized SQL queries to derive meaningful insights from the cleaned and transformed data stored in Azure Data Lake.
 
 ### Summary Statistics for Numerical Columns
-- Calculated summary statistics for the latest snapshot of the data from the `bixi_station_data` table. 
+- Calculated summary statistics for the latest snapshot of the data from the `bike rental_station_data` table. 
 - This included determining the minimum, maximum, and average values for key numerical columns such as the number of bikes available, e-bikes available, and docks available.
 - These statistics provided a comprehensive overview of the bike and dock availability across different stations.
 
@@ -86,7 +86,7 @@ This project aims to enhance operational efficiencies and user experiences by le
 ## 4. Power BI Dashboard
 
 ### Dashboard Overview
-The Power BI dashboard provides a dynamic and interactive visualization of the Bixi bike station data. It includes key metrics and detailed insights into the current status of bike-sharing stations in Montreal. The dashboard facilitates real-time monitoring and helps stakeholders make informed decisions based on up-to-date data with an option to select the view based on the update time.
+The Power BI dashboard provides a dynamic and interactive visualization of the bike rental bike station data. It includes key metrics and detailed insights into the current status of bike-sharing stations in Montreal. The dashboard facilitates real-time monitoring and helps stakeholders make informed decisions based on up-to-date data with an option to select the view based on the update time.
 
 ### Key Features
 - **Total Available Bikes**: Displays the total number of bikes available across all stations.
